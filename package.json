@@ -1,0 +1,28 @@
+{
+  "name": "osu-pp-calc",
+  "version": "1.0.0",
+  "description": "updated to latest [osu-perfomance] (https://github.com/ppy/osu-performance) version of [osu-pp-calculator] (https://www.npmjs.com/package/osu-pp-calculator)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzervlad/osu-pp-calc.git"
+  },
+  "keywords": [
+    "osu",
+    "pp",
+    "calc",
+    "calculator",
+    "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cosu!\u001b[3~\u001b[3~\u001b[3~\u001b[3\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b\u001b[C\u001b[C\u001b[Cosu!",
+    "pp",
+    "calculator"
+  ],
+  "author": "octopussx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzervlad/osu-pp-calc/issues"
+  },
+  "homepage": "https://github.com/uzervlad/osu-pp-calc#readme"
+}
