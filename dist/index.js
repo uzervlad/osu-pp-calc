@@ -92,6 +92,7 @@ var PPCalculator;
         }
         else if (approachRate < 8.0) {
             var lowArBonus = 0.01 * (8.0 - approachRate);
+			if(modifiers & mods_1.default.Hidden) lowArBonus *= 2;
             approachRateBonus += lowArBonus;
         }
         // accuracy bonus (bad aim can lead to bad accuracy, reused in speed for same reason)
@@ -140,6 +141,18 @@ var PPCalculator;
             Math.pow(accuracyValue, 1.1), 1.0 / 1.1) * finalMultiplier;
     }
     PPCalculator.calculateWithCounts = calculateWithCounts;
+	function calculateFull(beatmap, accuracyPercent, modifiers, combo, misses, scoreVersion) {
+		let bm = beatmap;
+		let bmfc = beatmap;
+		let bmmax = beatmap;
+		let result = {
+			pp: calculate(bm, accuracyPercent, modifiers, combo, misses, scoreVersion),
+			fc: calculate(bm, accuracyPercent, modifiers, beatmap.combo, 0, scoreVersion),
+			max: calculate(bm, 100, modifiers, beatmap.combo, 0, scoreVersion)
+		}
+		return result;
+	}
+	PPCalculator.calculateFull = calculateFull;
 })(PPCalculator || (PPCalculator = {}));
 exports.PPCalculator = PPCalculator;
 ;
