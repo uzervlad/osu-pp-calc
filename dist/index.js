@@ -147,8 +147,8 @@ var PPCalculator;
 		let bmmax = beatmap;
 		let result = {
 			pp: calculate(bm, accuracyPercent, modifiers, combo, misses, scoreVersion),
-			fc: calculate(bm, accuracyPercent, modifiers, beatmap.combo, 0, scoreVersion),
-			max: calculate(bm, 100, modifiers, beatmap.combo, 0, scoreVersion)
+			fc: calculate(bmfc, accuracyPercent, modifiers, beatmap.combo, 0, scoreVersion),
+			max: calculate(bmmax, 100, modifiers, beatmap.combo, 0, scoreVersion)
 		}
 		return result;
 	}
