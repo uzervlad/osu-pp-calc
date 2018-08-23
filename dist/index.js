@@ -146,9 +146,12 @@ var PPCalculator;
 		let bmfc = beatmap;
 		let bmmax = beatmap;
 		let result = {
+			let mods = 0
+			if(modifiers & mods_1.default.Flashlight) mods+=1024;
+			if(modifiers & mods_1.default.Hidden) mods +=8;
 			pp: calculate(bm, accuracyPercent, modifiers, combo, misses, scoreVersion),
-			fc: calculate(bmfc, accuracyPercent, modifiers, beatmap.combo, 0, scoreVersion),
-			max: calculate(bmmax, 100, modifiers, beatmap.combo, 0, scoreVersion)
+			fc: calculate(bmfc, accuracyPercent, mods, beatmap.combo, 0, scoreVersion),
+			max: calculate(bmmax, 100, mods, beatmap.combo, 0, scoreVersion)
 		}
 		return result;
 	}
